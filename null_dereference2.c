@@ -8,7 +8,7 @@ int main()
     //@ requires true;
     //@ ensures true;
 {
-    struct account *myAccount = NULL;
+    struct account *myAccount = 0;
 
     myAccount->balance = 5; // Error: NULL dereference
 
