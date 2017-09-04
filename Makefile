@@ -4,17 +4,25 @@ SRCS = \
 	null_dereference.c \
 	undefined_value.c
 TARGETS = \
-	$(patsubst %.c,gcc/%.log,$(SRCS))
+	$(patsubst %.c,gcc/%.log,$(SRCS)) \
+	$(patsubst %.c,uno/%.log,$(SRCS))
 
-all: $(TARGETS)
-	date > data.log
+all: date.stamp
+
+date.stamp: $(TARGETS)
+	date > date.stamp
 
 # GCC
 gcc/%.log: %.c
 	mkdir -p gcc
 	gcc -Wall $< > $@ 2>&1
 
+# Uno
+uno/%.log: %.c
+	mkdir -p uno
+	uno $< > $@ 2>&1
+
 clean:
-	rm -rf data.log *.out gcc/
+	rm -rf date.stamp *.out gcc uno
 
 .PHONY: all clean
