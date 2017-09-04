@@ -2,6 +2,7 @@ SRCS = \
 	buffer_overflow.c \
 	memory_leak.c \
 	null_dereference.c \
+	null_dereference2.c \
 	undefined_value.c
 TARGETS = \
 	$(patsubst %.c,gcc/%.log,$(SRCS)) \
