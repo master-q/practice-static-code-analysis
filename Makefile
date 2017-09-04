@@ -6,6 +6,7 @@ SRCS = \
 	undefined_value.c
 TARGETS = \
 	$(patsubst %.c,gcc/%.log,$(SRCS)) \
+	$(patsubst %.c,scan-build/%.log,$(SRCS)) \
 	$(patsubst %.c,uno/%.log,$(SRCS))
 
 all: date.stamp
@@ -18,12 +19,17 @@ gcc/%.log: %.c
 	mkdir -p gcc
 	gcc -Wall $< > $@ 2>&1
 
+# Clang Static Analyzer
+scan-build/%.log: %.c
+	mkdir -p scan-build
+	scan-build-5.0 -o $@.out gcc -c $< > $@ 2>&1
+
 # Uno
 uno/%.log: %.c
 	mkdir -p uno
 	uno $< > $@ 2>&1
 
 clean:
-	rm -rf date.stamp *.out gcc uno
+	rm -rf date.stamp *.out *.o gcc uno scan-build
 
 .PHONY: all clean
