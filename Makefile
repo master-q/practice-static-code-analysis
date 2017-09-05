@@ -6,6 +6,7 @@ SRCS = \
 	undefined_value.c
 TARGETS = \
 	$(patsubst %.c,gcc/%.log,$(SRCS)) \
+	$(patsubst %.c,infer/%.log,$(SRCS)) \
 	$(patsubst %.c,scan-build/%.log,$(SRCS)) \
 	$(patsubst %.c,cppcheck/%.log,$(SRCS)) \
 	$(patsubst %.c,splint/%.log,$(SRCS)) \
@@ -23,7 +24,9 @@ gcc/%.log: %.c
 	gcc -Wall $< > $@ 2>&1
 
 # Infer
-# xxx
+infer/%.log: %.c
+	mkdir -p infer
+	infer -- clang -c $< > $@ 2>&1
 
 # Clang Static Analyzer
 scan-build/%.log: %.c
@@ -51,6 +54,6 @@ verifast/%.log: %.c
 	-verifast -c $< > $@ 2>&1
 
 clean:
-	rm -rf date.stamp *.out *.o gcc scan-build cppcheck splint uno verifast
+	rm -rf date.stamp *.out *.o gcc infer infer-out scan-build cppcheck splint uno verifast
 
 .PHONY: all clean
