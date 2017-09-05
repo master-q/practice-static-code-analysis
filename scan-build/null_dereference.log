@@ -1,0 +1,3 @@
+scan-build: Using '/usr/lib/llvm-5.0/bin/clang' for static analysis
+scan-build: Removing directory '/home/kiwamu/src/practice-static-code-analysis/scan-build/null_dereference.log.out/2017-09-05-130744-6489-1' because it contains no reports.
+scan-build: No bugs found.

@@ -1,0 +1,2 @@
+null_dereference_simple.c
+null_dereference_simple.c(9,20-21): No matching heap chunks: integer(0, _)

@@ -1,0 +1,24 @@
+Capturing in make/cc mode...
+Found 1 source file to analyze in /home/kiwamu/src/practice-static-code-analysis/infer-out
+Starting analysis...
+
+legend:
+  "F" analyzing a file
+  "." analyzing a procedure
+
+F.
+
+Found 1 issue
+
+null_dereference.c:14: error: NULL_DEREFERENCE
+  pointer `myAccount` last assigned on line 11 could be null and is dereferenced at line 14, column 5.
+  12.   
+  13.       //if (myAccount == 0) { abort(); }
+  14. >     myAccount->balance = 5; // Error: NULL dereference
+  15.   
+  16.       free(myAccount);
+
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 1

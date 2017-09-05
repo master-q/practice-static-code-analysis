@@ -1,0 +1,7 @@
+scan-build: Using '/usr/lib/llvm-5.0/bin/clang' for static analysis
+undefined_value.c:9:5: warning: 2nd function call argument is an uninitialized value
+    printf("%d\n", my_array[0]); // Error: Undefined value
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /home/kiwamu/src/practice-static-code-analysis/scan-build/undefined_value.log.out/2017-09-05-130744-6515-1' to examine bug reports.

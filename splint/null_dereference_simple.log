@@ -1,0 +1,11 @@
+Splint 3.1.2 --- 01 Dec 2016
+
+null_dereference_simple.c: (in function main)
+null_dereference_simple.c:9:21: Dereference of null pointer p: *p
+  A possibly null pointer is dereferenced.  Value is either the result of a
+  function which may return null (in which case, code should check it is not
+  null), or a global, parameter or structure field declared with the null
+  qualifier. (Use -nullderef to inhibit warning)
+   null_dereference_simple.c:7:14: Storage p becomes null
+
+Finished checking --- 1 code warning

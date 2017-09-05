@@ -1,0 +1,2 @@
+null_dereference.c
+null_dereference.c(14,14-16): No matching heap chunks: account_balance(myAccount, _)

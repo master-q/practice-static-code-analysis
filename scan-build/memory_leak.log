@@ -1,0 +1,7 @@
+scan-build: Using '/usr/lib/llvm-5.0/bin/clang' for static analysis
+memory_leak.c:18:5: warning: Potential leak of memory pointed to by 'myAccount'
+    return 0;
+    ^~~~~~~~
+1 warning generated.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /home/kiwamu/src/practice-static-code-analysis/scan-build/memory_leak.log.out/2017-09-05-130743-6476-1' to examine bug reports.

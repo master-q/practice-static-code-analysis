@@ -1,0 +1,4 @@
+undefined_value.c: In function ‘main’:
+undefined_value.c:9:5: warning: ‘my_array[0]’ is used uninitialized in this function [-Wuninitialized]
+     printf("%d\n", my_array[0]); // Error: Undefined value
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~

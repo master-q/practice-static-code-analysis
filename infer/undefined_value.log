@@ -1,0 +1,11 @@
+Capturing in make/cc mode...
+Found 1 source file to analyze in /home/kiwamu/src/practice-static-code-analysis/infer-out
+Starting analysis...
+
+legend:
+  "F" analyzing a file
+  "." analyzing a procedure
+
+F.
+
+  No issues found  

@@ -1,0 +1,2 @@
+memory_leak.c
+memory_leak.c(19,1-2): Function leaks heap chunks.

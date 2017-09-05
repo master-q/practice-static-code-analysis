@@ -1,0 +1,8 @@
+Splint 3.1.2 --- 01 Dec 2016
+
+undefined_value.c: (in function main)
+undefined_value.c:9:20: Array element my_array[0] used before definition
+  An rvalue is used that may not be initialized to a value on some execution
+  path. (Use -usedef to inhibit warning)
+
+Finished checking --- 1 code warning

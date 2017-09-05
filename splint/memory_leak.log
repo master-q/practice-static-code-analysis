@@ -1,0 +1,10 @@
+Splint 3.1.2 --- 01 Dec 2016
+
+memory_leak.c: (in function main)
+memory_leak.c:18:14: Fresh storage myAccount not released before return
+  A memory leak has been detected. Storage allocated locally is not released
+  before the last reference to it is lost. (Use -mustfreefresh to inhibit
+  warning)
+   memory_leak.c:11:54: Fresh storage myAccount created
+
+Finished checking --- 1 code warning

@@ -1,0 +1,24 @@
+Capturing in make/cc mode...
+Found 1 source file to analyze in /home/kiwamu/src/practice-static-code-analysis/infer-out
+Starting analysis...
+
+legend:
+  "F" analyzing a file
+  "." analyzing a procedure
+
+F.
+
+Found 1 issue
+
+null_dereference_simple.c:9: error: NULL_DEREFERENCE
+  pointer `p` last assigned on line 7 could be null and is dereferenced at line 9, column 20.
+  7.       int *p = 0;
+  8.   
+  9. >     printf("%d\n", *p); // Error: NULL dereference
+  10.   
+  11.       return 0;
+
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 1

@@ -1,0 +1,2 @@
+uno: ./buffer_overflow.c:  11 array indexing error 'my_array[20]' (array-size: 10)
+uno:	check completed, try 'uno -h' for different checks

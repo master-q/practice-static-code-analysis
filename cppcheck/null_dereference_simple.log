@@ -1,0 +1,3 @@
+Checking null_dereference_simple.c ...
+[null_dereference_simple.c:9]: (error) Null pointer dereference: p
+[null_dereference_simple.c:9]: (error) Null pointer dereference

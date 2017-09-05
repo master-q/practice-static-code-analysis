@@ -1,0 +1,12 @@
+Splint 3.1.2 --- 01 Dec 2016
+
+null_dereference.c: (in function main)
+null_dereference.c:14:14: Arrow access from possibly null pointer myAccount:
+                             myAccount->balance
+  A possibly null pointer is dereferenced.  Value is either the result of a
+  function which may return null (in which case, code should check it is not
+  null), or a global, parameter or structure field declared with the null
+  qualifier. (Use -nullderef to inhibit warning)
+   null_dereference.c:11:33: Storage myAccount may become null
+
+Finished checking --- 1 code warning

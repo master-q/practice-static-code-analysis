@@ -1,0 +1,7 @@
+scan-build: Using '/usr/lib/llvm-5.0/bin/clang' for static analysis
+null_dereference_simple.c:9:20: warning: Dereference of null pointer (loaded from variable 'p')
+    printf("%d\n", *p); // Error: NULL dereference
+                   ^~
+1 warning generated.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /home/kiwamu/src/practice-static-code-analysis/scan-build/null_dereference_simple.log.out/2017-09-05-130744-6502-1' to examine bug reports.
