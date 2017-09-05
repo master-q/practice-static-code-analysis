@@ -48,7 +48,7 @@ uno/%.log: %.c
 # VeriFast
 verifast/%.log: %.c
 	mkdir -p verifast
-	-verifast $< > $@ 2>&1
+	-verifast -c $< > $@ 2>&1
 
 clean:
 	rm -rf date.stamp *.out *.o gcc scan-build cppcheck splint uno verifast
